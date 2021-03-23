@@ -31,7 +31,7 @@ module SubstitutionCipher
       number = document.to_s.split('')
       # shift back the elements using key and convert to ascii
       result = number.map do |num|
-        (((num.ord + 128 - key) % 128) % 128).chr
+        ((num.ord + 128 - key) % 128).chr
       end
       # Join array to string
       result.join('')
